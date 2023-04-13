@@ -1,0 +1,54 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header .logo {
+  position: relative;
+  font-size: 25px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header .logo::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.navbar a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ededed;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s ease;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: #00abf0;
+}
+
+/* ANIMATION KEYFRAMES */
+
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
