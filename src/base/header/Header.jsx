@@ -1,21 +1,22 @@
 import React from "react";
 import "./header.css";
-import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <>
       <header className="header">
-        <Link to={"#"} className="logo">
+        <a href="#home" className="logo">
           Vince.
-        </Link>
+        </a>
+        <div className="bx bx-menu" id="hamburger"></div>
         <nav className="navbar">
-          <Link to={"#"} className="active">
+          <a href="#home" className="active">
             Home
-          </Link>
-          <Link to={"#"}>About</Link>
-          <Link to={"#"}>Services</Link>
-          <Link to={"#"}>Portfolio</Link>
-          <Link to={"#"}>Contact</Link>
+          </a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
         </nav>
       </header>
     </>

@@ -5,9 +5,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
-  background: #081b29;
-  color: #ededed;
+  background: var(--bg-color);
+  color: var(--white);
+}
+
+:root {
+  --bg-color: #081b29;
+  --bg-secondary: #112e42;
+  --primary: #00abf0;
+  --white: #ededed;
 }
