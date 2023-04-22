@@ -24,3 +24,10 @@ body {
   --primary: #00abf0;
   --white: #ededed;
 }
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
