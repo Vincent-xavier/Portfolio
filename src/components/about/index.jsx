@@ -9,6 +9,7 @@ const About = () => {
         <h2 className="page-header">
           About <span>Me</span>
         </h2>
+        <div className="about-container">
         <div className="about-img">
           <img src="assets/about-img.jpg" alt="author" />
           <span className="circle-spin"></span>
@@ -26,6 +27,7 @@ const About = () => {
           <div className="btn-box btns">
             <Link className="links">Read More..</Link>
           </div>
+        </div>
         </div>
       </section>
     </>

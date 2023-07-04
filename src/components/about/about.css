@@ -14,33 +14,33 @@
 .page-header span {
   color: var(--primary);
 }
+.about-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .about .about-img {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25rem;
-  height: 25rem;
-  border-radius: 50%;
+  width: 100%;
+  height: 50rem;
 }
 
 .about-img img {
   position: absolute;
   width: 90%;
   height: 90%;
-  border-radius: 50%;
   backdrop-filter: grayscale(50%);
-  border: 0.2rem solid var(--primary);
 }
 
 .about-img .circle-spin {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(0);
-  width: 105%;
-  height: 105%;
-  border-radius: 50%;
+  top: 1%;
+  left: 1%;
+  width: 100%;
+  height: 100%;
   border-top: 0.2rem solid var(--bg-secondary);
   border-bottom: 0.2rem solid var(--bg-secondary);
   border-right: 0.2rem solid var(--primary);
@@ -48,15 +48,15 @@
 }
 
 .about .about-content {
-  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 }
 
 .about .about-content h3 {
   font-size: 2.6rem;
+  text-align: left;
 }
 
 .about .about-content p {
