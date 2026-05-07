@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-label="Profile placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <radialGradient id="face" cx="0.5" cy="0.45" r="0.6">
+      <stop offset="0%" stop-color="#fde6cf"/>
+      <stop offset="100%" stop-color="#e7c39a"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="480" height="480" fill="url(#bg)"/>
+  <circle cx="240" cy="220" r="220" fill="#eff6ff" opacity="0.6"/>
+
+  <g>
+    <!-- shoulders / suit -->
+    <path d="M60,480 C 80,360 150,330 240,330 C 330,330 400,360 420,480 Z" fill="url(#suit)"/>
+    <!-- shirt v -->
+    <path d="M200,340 L240,400 L280,340 L260,330 L240,360 L220,330 Z" fill="url(#shirt)"/>
+    <!-- tie -->
+    <path d="M232,340 L248,340 L252,360 L240,420 L228,360 Z" fill="#2563eb"/>
+
+    <!-- neck -->
+    <rect x="218" y="290" width="44" height="50" fill="#e7c39a"/>
+    <!-- head -->
+    <circle cx="240" cy="220" r="80" fill="url(#face)"/>
+    <!-- hair -->
+    <path d="M168,200 C 168,150 200,130 240,130 C 280,130 312,150 312,200 C 312,210 305,210 305,200 C 300,165 275,150 240,150 C 205,150 180,165 175,200 C 175,210 168,210 168,200 Z" fill="#1f2937"/>
+    <!-- eyebrows -->
+    <rect x="200" y="208" width="22" height="4" rx="2" fill="#1f2937"/>
+    <rect x="258" y="208" width="22" height="4" rx="2" fill="#1f2937"/>
+    <!-- eyes -->
+    <circle cx="211" cy="222" r="3.5" fill="#1f2937"/>
+    <circle cx="269" cy="222" r="3.5" fill="#1f2937"/>
+    <!-- nose -->
+    <path d="M240,228 L235,250 L245,250 Z" fill="#d6a884" opacity="0.5"/>
+    <!-- mouth -->
+    <path d="M222,265 Q240,278 258,265" stroke="#9b5d3f" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- decorative ring -->
+  <circle cx="240" cy="220" r="200" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="2 8" opacity="0.3"/>
+</svg>

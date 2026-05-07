@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { SectionLabel } from './Skills'
+import { SectionHeader } from './SectionHeader'
 
 const bullets = [
   {
@@ -20,202 +20,264 @@ const bullets = [
     icon: '⬡',
     text: 'Improved data retrieval performance by',
     highlight: '40%',
-    end: ' via query optimization on PostgreSQL/MSSQL databases.',
+    end: ' via query optimization on PostgreSQL / MSSQL databases.',
   },
   {
     icon: '◉',
     text: 'Maintained a production',
     highlight: 'defect escape rate below 5%',
-    end: ' across all releases in 2-week Agile/Scrum sprints.',
+    end: ' across all releases in 2-week Agile / Scrum sprints.',
   },
 ]
 
+const techStack = [
+  'React',
+  'TypeScript',
+  '.NET Core',
+  'PostgreSQL',
+  'MSSQL',
+  'JWT',
+  'Docker',
+  'Azure DevOps',
+  'React Native',
+  'Hangfire',
+  'SignalR',
+]
+
 const Experience: React.FC = () => {
-  const [activeBullet, setActiveBullet] = useState<number | null>(null)
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
     <section
       id="experience"
       style={{
-        padding: '8rem 6rem',
-        maxWidth: 1300, margin: '0 auto',
-        borderTop: '1px solid var(--border)',
+        padding: 'clamp(4rem, 8vh, 7rem) clamp(1.25rem, 5vw, 4rem)',
+        maxWidth: 1280,
+        margin: '0 auto',
       }}
     >
-      <SectionLabel num="02" title="Experience" />
+      <SectionHeader
+        eyebrow="Experience"
+        title="Where I've shipped software"
+        subtitle="A focused career so far — full-stack work for one product company, multiple real clients."
+      />
 
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        style={{
-          border: '1px solid var(--border2)',
-          borderRadius: 4, overflow: 'hidden',
-        }}
-      >
-        {/* Header */}
-        <div style={{
-          background: 'var(--bg2)',
-          padding: '2.5rem 3rem',
-          display: 'flex', justifyContent: 'space-between',
-          alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem',
-          borderBottom: '1px solid var(--border)',
-        }}>
+      <div ref={ref} className="exp-editorial">
+        {/* Header band — naked, no card */}
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+          className="exp-header"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr auto',
+            gap: '1.25rem',
+            alignItems: 'flex-start',
+            paddingBottom: '1.5rem',
+            borderBottom: '1px solid var(--border)',
+          }}
+        >
           <div>
-            <div style={{
-              fontFamily: 'var(--font-mono)', fontSize: '0.68rem',
-              color: 'var(--accent)', letterSpacing: '0.1em',
-              textTransform: 'uppercase', marginBottom: '0.75rem',
-            }}>
-              Software Engineer
-            </div>
-            <h3 style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(1.4rem, 2.5vw, 2rem)',
-              fontWeight: 700, letterSpacing: '-0.03em',
-              color: 'var(--text)', marginBottom: '0.35rem',
-            }}>
-              Bosco Soft Technologies Pvt. Ltd.
-            </h3>
-            <div style={{
-              fontFamily: 'var(--font-mono)', fontSize: '0.72rem',
-              color: 'var(--accent2)',
-            }}>
-              Full Stack .NET + React Developer
-            </div>
-          </div>
-
-          <div style={{ textAlign: 'right' }}>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.4 }}
+            <div
               style={{
-                fontFamily: 'var(--font-mono)', fontSize: '0.7rem',
-                color: 'var(--textdim)', letterSpacing: '0.06em',
-                marginBottom: '0.5rem',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 8,
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.72rem',
+                color: 'var(--accent)',
+                fontWeight: 600,
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+                marginBottom: '0.6rem',
               }}
             >
-              Oct 2022 — Present
-            </motion.div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, justifyContent: 'flex-end' }}>
-              <motion.span
-                animate={{ opacity: [1, 0, 1] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
+              <span
                 style={{
                   width: 6, height: 6, borderRadius: '50%',
-                  background: 'var(--accent)', display: 'inline-block',
+                  background: 'var(--accent-3)',
+                  boxShadow: '0 0 0 4px color-mix(in srgb, var(--accent-3) 22%, transparent)',
                 }}
               />
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--accent)' }}>
-                Currently Active
-              </span>
+              Software Engineer · Currently Active
             </div>
-            <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--textdim)', marginTop: 6 }}>
-              Tamil Nadu, India
+            <h3
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(1.4rem, 3vw, 2rem)',
+                fontWeight: 800,
+                letterSpacing: '-0.025em',
+                color: 'var(--text)',
+                marginBottom: '0.4rem',
+                lineHeight: 1.15,
+              }}
+            >
+              Bosco Soft Technologies Pvt. Ltd.
+            </h3>
+            <div
+              style={{
+                fontFamily: 'var(--font-sans)',
+                fontSize: '1rem',
+                color: 'var(--text-soft)',
+                fontWeight: 500,
+              }}
+            >
+              Full Stack .NET + React Developer
+              <span style={{ color: 'var(--text-mid)', margin: '0 8px' }}>·</span>
+              <span style={{ color: 'var(--text-mid)' }}>Tamil Nadu, India</span>
             </div>
           </div>
-        </div>
 
-        {/* Timeline bullets */}
-        <div style={{ padding: '2.5rem 3rem', position: 'relative' }}>
-          {/* Vertical line */}
-          <motion.div
-            initial={{ scaleY: 0 }}
-            animate={inView ? { scaleY: 1 } : {}}
-            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          <div
             style={{
-              position: 'absolute', left: '3rem', top: '2.5rem',
-              width: 1, bottom: '2.5rem',
-              background: 'linear-gradient(to bottom, var(--accent), var(--accent2))',
-              transformOrigin: 'top', opacity: 0.3,
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.78rem',
+              color: 'var(--text-soft)',
+              fontWeight: 600,
+              padding: '6px 12px',
+              borderRadius: 999,
+              background: 'var(--bg-muted)',
+              border: '1px solid var(--border)',
+              whiteSpace: 'nowrap',
+              alignSelf: 'flex-start',
+            }}
+          >
+            Oct 2022 — Present
+          </div>
+        </motion.div>
+
+        {/* Timeline — naked, no enclosing card */}
+        <div
+          style={{
+            position: 'relative',
+            padding: '2rem 0 1.5rem',
+          }}
+        >
+          <div
+            aria-hidden
+            style={{
+              position: 'absolute',
+              left: 19,
+              top: '2rem',
+              bottom: '1.5rem',
+              width: 2,
+              background:
+                'linear-gradient(to bottom, color-mix(in srgb, var(--accent) 60%, transparent), color-mix(in srgb, var(--accent) 8%, transparent))',
+              borderRadius: 2,
             }}
           />
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', paddingLeft: '2.5rem' }}>
+          <ol style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.4rem' }}>
             {bullets.map((b, i) => (
-              <motion.div
+              <motion.li
                 key={i}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -10 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.4 + i * 0.12, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                onHoverStart={() => setActiveBullet(i)}
-                onHoverEnd={() => setActiveBullet(null)}
+                transition={{ delay: 0.1 + i * 0.07, duration: 0.5 }}
                 style={{
-                  display: 'flex', alignItems: 'flex-start', gap: '1.25rem',
-                  position: 'relative', cursor: 'default',
+                  display: 'grid',
+                  gridTemplateColumns: '40px 1fr',
+                  gap: '1rem',
+                  alignItems: 'flex-start',
                 }}
               >
-                {/* Dot */}
-                <motion.div
-                  animate={activeBullet === i ? {
-                    scale: 1.4,
-                    backgroundColor: 'var(--accent)',
-                  } : {
-                    scale: 1,
-                    backgroundColor: 'var(--bg3)',
-                  }}
+                <span
+                  aria-hidden
                   style={{
-                    width: 10, height: 10, borderRadius: '50%',
-                    border: '1px solid var(--accent)',
-                    flexShrink: 0, marginTop: 5,
-                    position: 'absolute', left: -29,
-                    transition: 'all 0.2s',
+                    width: 40, height: 40,
+                    borderRadius: 10,
+                    background: 'var(--bg)',
+                    border: '1.5px solid var(--accent)',
+                    color: 'var(--accent)',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '0.95rem',
+                    flexShrink: 0,
+                    position: 'relative',
+                    zIndex: 1,
+                    boxShadow: '0 0 0 4px var(--bg)',
                   }}
-                />
-
-                {/* Icon */}
-                <motion.span
-                  animate={{ color: activeBullet === i ? 'var(--accent)' : 'var(--accent2)' }}
-                  style={{ fontSize: '1rem', flexShrink: 0 }}
                 >
                   {b.icon}
-                </motion.span>
-
-                {/* Text */}
-                <p style={{
-                  fontFamily: 'var(--font-mono)', fontSize: '0.88rem',
-                  color: 'var(--textdim)', lineHeight: 1.7,
-                }}>
+                </span>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-sans)',
+                    fontSize: 'clamp(0.95rem, 1.3vw, 1.05rem)',
+                    color: 'var(--text-soft)',
+                    lineHeight: 1.7,
+                    paddingTop: 6,
+                  }}
+                >
                   {b.text}{' '}
-                  <motion.span
-                    animate={{ color: activeBullet === i ? 'var(--accent)' : 'var(--text)' }}
-                    style={{ transition: 'color 0.2s' }}
+                  <span
+                    style={{
+                      color: 'var(--text)',
+                      fontWeight: 700,
+                      backgroundImage: 'linear-gradient(transparent 60%, color-mix(in srgb, var(--accent) 22%, transparent) 60%)',
+                      padding: '0 2px',
+                    }}
                   >
                     {b.highlight}
-                  </motion.span>
+                  </span>
                   {b.end}
                 </p>
-              </motion.div>
+              </motion.li>
             ))}
-          </div>
+          </ol>
         </div>
 
-        {/* Tech used footer */}
-        <div style={{
-          borderTop: '1px solid var(--border)',
-          padding: '1.5rem 3rem',
-          display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap',
-        }}>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--textdim)', letterSpacing: '0.08em' }}>TECH USED:</span>
-          {['React', '.NET Core', 'PostgreSQL', 'MSSQL', 'JWT', 'Docker', 'Azure DevOps', 'React Native'].map(t => (
-            <motion.span
+        {/* Tech footer — naked inline strip */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.4 }}
+          style={{
+            paddingTop: '1.5rem',
+            borderTop: '1px dashed var(--border-strong)',
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 8,
+            alignItems: 'center',
+          }}
+        >
+          <span
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.7rem',
+              color: 'var(--text-mid)',
+              letterSpacing: '0.08em',
+              fontWeight: 600,
+              textTransform: 'uppercase',
+              marginRight: 6,
+            }}
+          >
+            Stack ·
+          </span>
+          {techStack.map(t => (
+            <span
               key={t}
-              whileHover={{ scale: 1.1, color: 'var(--accent)' }}
               style={{
-                fontFamily: 'var(--font-mono)', fontSize: '0.65rem',
-                color: 'var(--textdim)', background: 'var(--bg3)',
-                border: '1px solid var(--border)', padding: '3px 10px',
-                borderRadius: 2, cursor: 'default', transition: 'color 0.2s',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.74rem',
+                color: 'var(--text-soft)',
+                fontWeight: 500,
               }}
             >
               {t}
-            </motion.span>
+              <span style={{ color: 'var(--text-dim)', marginLeft: 8 }}>·</span>
+            </span>
           ))}
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
+
+      <style>{`
+        @media (max-width: 540px) {
+          .exp-header { grid-template-columns: 1fr !important; }
+        }
+      `}</style>
     </section>
   )
 }

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Church Management System mockup">
+  <defs>
+    <linearGradient id="cBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef2f2"/>
+      <stop offset="100%" stop-color="#fee2e2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#cBg)"/>
+
+  <!-- browser frame -->
+  <rect x="60" y="60" width="680" height="380" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="60" y="60" width="680" height="36" rx="14" fill="#f1f5f9"/>
+  <circle cx="82" cy="78" r="5" fill="#ef4444"/>
+  <circle cx="100" cy="78" r="5" fill="#f59e0b"/>
+  <circle cx="118" cy="78" r="5" fill="#10b981"/>
+  <rect x="160" y="68" width="420" height="20" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="178" y="82" font-family="JetBrains Mono, monospace" font-size="11" fill="#64748b">chms.app/members</text>
+
+  <!-- left rail -->
+  <rect x="60" y="96" width="170" height="344" fill="#fff7ed"/>
+  <text x="80" y="130" font-family="Plus Jakarta Sans, sans-serif" font-size="14" font-weight="800" fill="#ef4444">ê CHMS</text>
+  <g font-family="Inter, sans-serif" font-size="11" fill="#475569">
+    <rect x="76" y="148" width="138" height="28" rx="6" fill="#ef4444" opacity="0.12"/>
+    <text x="92" y="166" fill="#ef4444" font-weight="600">£ Members</text>
+    <text x="92" y="196">Ë Contributions</text>
+    <text x="92" y="220">Ë Groups</text>
+    <text x="92" y="244">Ë Events</text>
+    <text x="92" y="268">Ë Pastoral Care</text>
+    <text x="92" y="292">Ë Communications</text>
+    <text x="92" y="316">Ë Reports</text>
+    <text x="92" y="340">Ë Roles &amp; Access</text>
+    <text x="92" y="364">Ë Settings</text>
+  </g>
+
+  <!-- title -->
+  <text x="254" y="128" font-family="Plus Jakarta Sans, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Members</text>
+  <text x="254" y="146" font-family="Inter, sans-serif" font-size="11" fill="#64748b">1,248 active · 32 pending · Multi-role RBAC</text>
+  <rect x="640" y="118" width="80" height="22" rx="6" fill="#ef4444"/>
+  <text x="660" y="133" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#ffffff">+ Add</text>
+
+  <!-- search -->
+  <rect x="254" y="160" width="466" height="30" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="266" y="180" font-family="Inter, sans-serif" font-size="11" fill="#94a3b8">  Search by name, email, group, role&</text>
+
+  <!-- table header -->
+  <rect x="254" y="206" width="466" height="28" rx="6" fill="#f1f5f9"/>
+  <g font-family="JetBrains Mono, monospace" font-size="9" fill="#64748b" letter-spacing="1">
+    <text x="270" y="224">NAME</text>
+    <text x="430" y="224">ROLE</text>
+    <text x="540" y="224">GROUP</text>
+    <text x="660" y="224">STATUS</text>
+  </g>
+
+  <!-- rows -->
+  <g font-family="Inter, sans-serif" font-size="11">
+    <rect x="254" y="240" width="466" height="34" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="272" cy="257" r="10" fill="#fde68a"/>
+    <text x="287" y="261" fill="#0f172a">Sarah Mitchell</text>
+    <text x="430" y="261" fill="#475569">Pastor</text>
+    <text x="540" y="261" fill="#475569">Worship</text>
+    <rect x="660" y="248" width="46" height="18" rx="9" fill="#dcfce7"/>
+    <text x="670" y="261" fill="#15803d" font-weight="600">Active</text>
+
+    <rect x="254" y="278" width="466" height="34" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="272" cy="295" r="10" fill="#bfdbfe"/>
+    <text x="287" y="299" fill="#0f172a">David Chen</text>
+    <text x="430" y="299" fill="#475569">Treasurer</text>
+    <text x="540" y="299" fill="#475569">Finance</text>
+    <rect x="660" y="286" width="46" height="18" rx="9" fill="#dcfce7"/>
+    <text x="670" y="299" fill="#15803d" font-weight="600">Active</text>
+
+    <rect x="254" y="316" width="466" height="34" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="272" cy="333" r="10" fill="#fecaca"/>
+    <text x="287" y="337" fill="#0f172a">Mary Johnson</text>
+    <text x="430" y="337" fill="#475569">Deacon</text>
+    <text x="540" y="337" fill="#475569">Outreach</text>
+    <rect x="660" y="324" width="46" height="18" rx="9" fill="#dcfce7"/>
+    <text x="670" y="337" fill="#15803d" font-weight="600">Active</text>
+
+    <rect x="254" y="354" width="466" height="34" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="272" cy="371" r="10" fill="#bbf7d0"/>
+    <text x="287" y="375" fill="#0f172a">James Wilson</text>
+    <text x="430" y="375" fill="#475569">Member</text>
+    <text x="540" y="375" fill="#475569">Youth</text>
+    <rect x="660" y="362" width="50" height="18" rx="9" fill="#fef3c7"/>
+    <text x="670" y="375" fill="#92400e" font-weight="600">Pending</text>
+
+    <rect x="254" y="392" width="466" height="34" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+    <circle cx="272" cy="409" r="10" fill="#ddd6fe"/>
+    <text x="287" y="413" fill="#0f172a">Emily Davis</text>
+    <text x="430" y="413" fill="#475569">Admin</text>
+    <text x="540" y="413" fill="#475569">Operations</text>
+    <rect x="660" y="400" width="46" height="18" rx="9" fill="#dcfce7"/>
+    <text x="670" y="413" fill="#15803d" font-weight="600">Active</text>
+  </g>
+</svg>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Equipment Rental System mockup">
+  <defs>
+    <linearGradient id="rBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2ff"/>
+      <stop offset="100%" stop-color="#e0e7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#rBg)"/>
+
+  <!-- browser frame -->
+  <rect x="60" y="60" width="680" height="380" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="60" y="60" width="680" height="36" rx="14" fill="#f1f5f9"/>
+  <circle cx="82" cy="78" r="5" fill="#ef4444"/>
+  <circle cx="100" cy="78" r="5" fill="#f59e0b"/>
+  <circle cx="118" cy="78" r="5" fill="#10b981"/>
+  <rect x="160" y="68" width="420" height="20" rx="4" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="178" y="82" font-family="JetBrains Mono, monospace" font-size="11" fill="#64748b">rental-platform.app/availability</text>
+
+  <!-- header -->
+  <rect x="60" y="96" width="680" height="50" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="80" y="128" font-family="Plus Jakarta Sans, sans-serif" font-size="16" font-weight="800" fill="#6366f1">™ RentEquip</text>
+  <g font-family="Inter, sans-serif" font-size="11" fill="#475569">
+    <text x="220" y="128">Fleet</text>
+    <text x="270" y="128" fill="#6366f1" font-weight="600">Availability</text>
+    <text x="350" y="128">Bookings</text>
+    <text x="420" y="128">Reports</text>
+  </g>
+  <rect x="640" y="112" width="80" height="22" rx="6" fill="#6366f1"/>
+  <text x="654" y="127" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#ffffff">+ New Rental</text>
+
+  <!-- title row -->
+  <text x="80" y="178" font-family="Plus Jakarta Sans, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Equipment Availability</text>
+  <text x="80" y="198" font-family="Inter, sans-serif" font-size="11" fill="#64748b">Real-time view across the fleet · Today, 14:30 IST</text>
+
+  <!-- timeline grid -->
+  <g>
+    <!-- column headers -->
+    <text x="240" y="222" font-family="JetBrains Mono, monospace" font-size="9" fill="#64748b" letter-spacing="1">MON</text>
+    <text x="310" y="222" font-family="JetBrains Mono, monospace" font-size="9" fill="#64748b" letter-spacing="1">TUE</text>
+    <text x="380" y="222" font-family="JetBrains Mono, monospace" font-size="9" fill="#64748b" letter-spacing="1">WED</text>
+    <text x="450" y="222" font-family="JetBrains Mono, monospace" font-size="9" fill="#64748b" letter-spacing="1">THU</text>
+    <text x="520" y="222" font-family="JetBrains Mono, monospace" font-size="9" fill="#64748b" letter-spacing="1">FRI</text>
+    <text x="590" y="222" font-family="JetBrains Mono, monospace" font-size="9" fill="#64748b" letter-spacing="1">SAT</text>
+    <text x="660" y="222" font-family="JetBrains Mono, monospace" font-size="9" fill="#64748b" letter-spacing="1">SUN</text>
+
+    <!-- rows -->
+    <g font-family="Inter, sans-serif" font-size="11" fill="#0f172a">
+      <text x="80" y="252">Excavator EX-21</text>
+      <rect x="220" y="240" width="140" height="22" rx="4" fill="#10b981" opacity="0.85"/>
+      <rect x="380" y="240" width="210" height="22" rx="4" fill="#6366f1" opacity="0.85"/>
+      <rect x="610" y="240" width="110" height="22" rx="4" fill="#cbd5e1"/>
+
+      <text x="80" y="284">Crane CR-08</text>
+      <rect x="220" y="272" width="350" height="22" rx="4" fill="#6366f1" opacity="0.85"/>
+      <rect x="590" y="272" width="130" height="22" rx="4" fill="#10b981" opacity="0.85"/>
+
+      <text x="80" y="316">Loader LD-12</text>
+      <rect x="220" y="304" width="80" height="22" rx="4" fill="#10b981" opacity="0.85"/>
+      <rect x="320" y="304" width="280" height="22" rx="4" fill="#f59e0b" opacity="0.85"/>
+      <rect x="620" y="304" width="100" height="22" rx="4" fill="#cbd5e1"/>
+
+      <text x="80" y="348">Bulldozer BD-04</text>
+      <rect x="220" y="336" width="200" height="22" rx="4" fill="#6366f1" opacity="0.85"/>
+      <rect x="440" y="336" width="280" height="22" rx="4" fill="#10b981" opacity="0.85"/>
+
+      <text x="80" y="380">Forklift FK-19</text>
+      <rect x="220" y="368" width="140" height="22" rx="4" fill="#10b981" opacity="0.85"/>
+      <rect x="380" y="368" width="170" height="22" rx="4" fill="#6366f1" opacity="0.85"/>
+      <rect x="570" y="368" width="150" height="22" rx="4" fill="#10b981" opacity="0.85"/>
+    </g>
+
+    <!-- legend -->
+    <g font-family="Inter, sans-serif" font-size="10" fill="#475569">
+      <rect x="80" y="408" width="14" height="10" rx="2" fill="#10b981"/>
+      <text x="100" y="418">Available</text>
+      <rect x="180" y="408" width="14" height="10" rx="2" fill="#6366f1"/>
+      <text x="200" y="418">Booked</text>
+      <rect x="270" y="408" width="14" height="10" rx="2" fill="#f59e0b"/>
+      <text x="290" y="418">Maintenance</text>
+      <rect x="380" y="408" width="14" height="10" rx="2" fill="#cbd5e1"/>
+      <text x="400" y="418">Closed</text>
+
+      <text x="600" y="418" fill="#10b981" font-weight="600"> 0 double-bookings</text>
+    </g>
+  </g>
+</svg>
